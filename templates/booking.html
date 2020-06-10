@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+
+<form action=" " method="post">
+    {% csrf_token %}
+    user:{{ request.user}}<br>
+    <label for="no">No of Tickets:</label>
+    <select id="no" name="t">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select>
+    TicketPrice:100
+{#    <input type="number" value="100" name="p">#}
+{#    Total Price:{% widthratio 100 1 t %}#}
+
+    <input type="submit" value="submit">
+</form>
+{{ state }}
+
+{% if l%}
+
+    <center>
+        <h3>
+        Username:{{ request.user}}<br>
+        Date:{{ l.movie.Date }}<br>
+        MovieName:{{ l.movie.Movie_name }}<br>
+        No_of_tickets{{ a }}<br>
+        Total Price:{{ total }}<br>
+        ShowTime:{{ k }}<br>
+            ClickHere<a href="{% url 'home' %}">Home</a>
+            ClickHere<a href="{% url 'ticket' %}">ticket</a>
+
+        </h3>
+    </center>
+
+{% endif %}
+
+
+
+
+
+
+<body>
+
+</body>
+</html>

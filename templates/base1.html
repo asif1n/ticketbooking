@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>TICKET BOOKING</title>
+    <h1>Ticket Booking</h1>
+
+</head>
+<body>
+{{ request.user }}
+<a href="{% url 'registration'%}">signup</a>
+<a href="{% url 'loginn'%}">login</a>
+<a href="{% url 'ticket'%}">ticketBooking</a>
+changePassword:
+<input placeholder="change password" name="cp">
+ForgetPassword:
+<input placeholder="Forgetpassword" name="fp">
+
+</body>
+
+</html>
